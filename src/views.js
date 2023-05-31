@@ -58,7 +58,7 @@ const changeColor = (dietType) => {
         mainColor.style.backgroundPosition = 'center top'
     } else if (dietType.meat ) {
         mainColor.style.backgroundImage = 'url(https://images.unsplash.com/photo-1565299524732-d2149c7eabf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1614&q=80)';
-        mainColor.style.backgroundPosition = 'center'
+        mainColor.style.backgroundPosition = '50% 25%'
         mainColor.style.backgroundSize = 'cover'
     } else if (dietType.pescatarian) {
         mainColor.style.backgroundImage = 'url(https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80)';
@@ -66,11 +66,11 @@ const changeColor = (dietType) => {
         mainColor.style.backgroundSize = 'cover'
     } else if (dietType.vegetarian) {
         mainColor.style.backgroundImage = 'url(https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1553&q=80)';
-        mainColor.style.backgroundPosition = 'center'
+        mainColor.style.backgroundPosition = '50% 40%'
         mainColor.style.backgroundSize = 'cover'
     } else if (dietType.vegan) {
         mainColor.style.backgroundImage = 'url(https://images.unsplash.com/photo-1544510807-1c0229035e63?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1544&q=80)';
-        mainColor.style.backgroundPosition = 'center top'
+        mainColor.style.backgroundPosition = '50% 10%'
         mainColor.style.backgroundSize = 'cover'
     } else {
         mainColor.style.backgroundImage = 'url(https://images.unsplash.com/photo-1531932755987-f95a88affea5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80)'

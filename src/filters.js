@@ -1,4 +1,4 @@
-
+// Recipe search and Diet Type filter functions
 
 const filters = {
     searchText: ''

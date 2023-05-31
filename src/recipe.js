@@ -50,10 +50,10 @@ const createRecipe = () => {
 // Remove a recipe
 const removeRecipe = (id) => {
     const recipeIndex = recipes.findIndex((recipe) => recipe.id === id)
-
     if (recipeIndex > -1) {
         recipes.splice(recipeIndex, 1)
         saveRecipes()
+        location.assign('/index.html')
     }
 }
 

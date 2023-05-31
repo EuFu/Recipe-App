@@ -9,10 +9,13 @@
             <h1 id="app-title">Recipe App</h1>
             <h4>Build your recipes from scratch</h4>
         </a>
-        <button class="button-style" id="return-home" href="/index.html">Return Home</button>
+        <!-- <button class="button-style" id="return-home" href="/index.html">Return Home</button> -->
     </header>
     <body id="edit-body">
         <div class="container" id="edit-main">
+            <div>
+                <button class="button-style" id="return-home" href="/index.html">Back</button>
+            </div>
             <div id="recipe-title">
                 <div id="input-box">
                     <input id="recipe-name" type="text" placeholder="Recipe name">
@@ -54,6 +57,17 @@
             <div id="delete-section">
                 <h2>Past expiration?</h2>
                 <button class="button-style" id="delete-button">Delete recipe</button>
+            </div>
+            <div class="modal" id="delete-modal">
+                <div class="modal-shell">
+                <div class="modal-content">
+                    <p >Deleting will permanently remove the recipe.</p>
+                    <div id="confirm-btns">
+                        <button class="button-style" id="cancel">Cancel</button>
+                        <button class="button-style" id="confirm-delete">Confirm</button>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
         <script src="/scripts/edit-bundle.js"></script>

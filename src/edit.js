@@ -9,6 +9,7 @@ const ingredientButton = document.querySelector('#add-ingredient')
 const ingredientText = document.querySelector('#new-ingredient')
 const returnButton = document.querySelector("#return-home")
 const recipeId = location.hash.substring(1)
+const deleteModal = document.getElementById('delete-modal')
 let recipes = getRecipes()
 let recipe = recipes.find((recipe) => recipe.id === recipeId) 
 if (!recipe) {
@@ -74,13 +75,18 @@ document.querySelector("#sort-button").addEventListener('click', (e) => {
         renderSteps(steps)
     
 })
-
-// Delete the current recipe
+// Display delete confirm window
 document.querySelector('#delete-button').addEventListener('click', (e) => {
-    removeRecipe(location.hash.substring(1))
-    location.assign('/index.html')
+    deleteModal.style.display = "block";
 })
-
+// Delete the current recipe
+document.querySelector('#confirm-delete').addEventListener('click', (e) => {
+    removeRecipe(recipeId)
+})
+// Close delete confirm window
+document.querySelector('#cancel').addEventListener('click', (e) => {
+    deleteModal.style.display = "none"
+})
 // Listen for changes in local storage
 window.addEventListener('storage', (e) => {
     if (e.key === 'recipes') {
