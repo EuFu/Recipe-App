@@ -23,7 +23,7 @@ const generateRecipeDOM = (recipe) => {
     recipeLink.appendChild(titleEl)
 
     // Setup the link
-    recipeLink.setAttribute('href', `/edit.html#${recipe.id}`)
+    recipeLink.setAttribute('href', `Recipe-App/edit.html#${recipe.id}`)
 
     // Setup the recipe status
     statusEl.setAttribute('id', 'status-message')
