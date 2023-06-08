@@ -1,7 +1,7 @@
 {
   "name": "boilerplate",
   "version": "1.0.0",
-  "homepage": "https://eufu.github.io/Recipe-App/",
+  "homepage": "https://eufu.github.io/Recipe-App",
   "description": "",
   "main": "src/index.js",
   "scripts": {
