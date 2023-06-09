@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'public/scripts'),
         filename: '[name]-bundle.js',
-        publicPath: process.env.NODE_ENV == "production" ? "/Recipe-App/" : "/"
+        publicPath: "/Recipe-App/"
     },
     module: {
         rules: [{

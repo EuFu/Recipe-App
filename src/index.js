@@ -23,7 +23,7 @@ checkboxes.forEach((diet) => diet.addEventListener('change', (e) => {
 // Add a recipe with button click
 document.querySelector('#add-button').addEventListener('click', (e) => {
     const id = createRecipe()
-    location.assign(`/edit.html#${id}`)
+    location.assign(`../edit.html#${id}`)
 })
 
 window.addEventListener('storage', (e) => {
