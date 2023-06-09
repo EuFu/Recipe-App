@@ -44,7 +44,7 @@ const removeRecipe = (id) => {
     if (recipeIndex > -1) {
         recipes.splice(recipeIndex, 1)
         saveRecipes()
-        location.assign('/index.html')
+        location.assign('index.html')
     }
 }
 
