@@ -7,7 +7,7 @@ const titleEl = document.querySelector('#recipe-name')
 const dietEl = document.querySelector('#diet-type')
 const ingredientButton = document.querySelector('#add-ingredient')
 const ingredientText = document.querySelector('#new-ingredient')
-const returnButton = document.querySelector("#return-home")
+const saveButton = document.querySelector("#save-button")
 const recipeId = location.hash.substring(1)
 const deleteModal = document.getElementById('delete-modal')
 let recipes = getRecipes()
@@ -27,7 +27,7 @@ renderIngredients(ingredients)
 renderSteps(steps)
 
 // Event handler for return button
-returnButton.addEventListener('click', (e) => {
+saveButton.addEventListener('click', (e) => {
      location.assign('index.html')
 })
 

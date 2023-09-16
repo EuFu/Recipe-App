@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Recipe app</title>
+        <!-- <link rel="stylesheet" href="/styles/styles.css"> -->
         <link rel="stylesheet" href="./public/styles/styles.css">
     </head>
     <header>
@@ -13,8 +14,8 @@
     </header>
     <body id="edit-body">
         <div class="container" id="edit-main">
-            <div>
-                <button class="button-style" id="return-home" href="/index.html">Back</button>
+            <div id="delete-section">
+                <button id="delete-button">x</button>
             </div>
             <div id="recipe-title">
                 <div id="input-box">
@@ -54,9 +55,9 @@
                 <div role="textbox" contenteditable id="step-text"></div>
                 <button class="button-style" id="add-step">Add Step</button>
             </div>
-            <div id="delete-section">
-                <h2>Past expiration?</h2>
-                <button class="button-style" id="delete-button">Delete recipe</button>
+            <div id="save-section">
+                <!-- <h2>Save Recipe</h2> -->
+                <button class="button-style" id="save-button">Save</button>
             </div>
             <div class="modal" id="delete-modal">
                 <div class="modal-shell">
@@ -71,5 +72,6 @@
             </div>
         </div>
         <script src="./public/scripts/edit-bundle.js"></script>
+        <!-- <script src="/scripts/edit-bundle.js"></script> -->
     </body>
 </html>

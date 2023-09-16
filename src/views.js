@@ -5,8 +5,8 @@ import { getFilters, getDietType } from './filters.js'
 
 // Generate DOM structure for the recipe
 const generateRecipeDOM = (recipe) => {
-    const recipeEl = document.createElement('div')
-    const recipeLink = document.createElement('a')
+    const recipeEl = document.createElement('a')
+    const recipeLink = document.createElement('div')
     const titleEl = document.createElement('p')
     const statusEl = document.createElement('p')
     recipeEl.classList.add('recipe')
@@ -23,7 +23,7 @@ const generateRecipeDOM = (recipe) => {
     recipeLink.appendChild(titleEl)
 
     // Setup the link
-    recipeLink.setAttribute('href', `edit.html#${recipe.id}`)
+    recipeEl.setAttribute('href', `edit.html#${recipe.id}`)
 
     // Setup the recipe status
     statusEl.setAttribute('id', 'status-message')
@@ -85,7 +85,20 @@ const renderRecipes = () => {
     const filters = getFilters()
     const dietType = getDietType()
     const recipesEl = document.querySelector('#recipe-el')
-    const filteredRecipes = recipes.filter((recipe) => recipe.name.toLowerCase().includes(filters.searchText.toLowerCase()))
+    // const filteredRecipes = recipes.filter((recipe) => recipe.name.toLowerCase().includes(filters.searchText.toLowerCase()))
+    // const filterNames = recipes.filter((recipe) => recipe.name.toLowerCase().includes(filters.searchText.toLowerCase()))
+    const filterNames = (recipe) => recipe.name.toLowerCase().includes(filters.searchText.toLowerCase())
+    // const filterIngredients = recipes.filter((recipe) => recipe.ingredients.filter((ingredient) => ingredient.name.toLowerCase().includes(filters.searchText.toLowerCase())))
+    // const testFilter = recipes.filter((recipe) => recipe.ingredients.map(ingredient => ingredient.name).toString().toLowerCase().includes(filters.searchText.toLocaleLowerCase()))
+    const filterIngredients = (recipe) => recipe.ingredients.map(ingredient => ingredient.name).toString().toLowerCase().includes(filters.searchText.toLocaleLowerCase())
+    const filteredRecipes = recipes.filter((recipe) => {
+        if(filterNames(recipe)) {
+            return recipe
+        }
+        else if (filterIngredients(recipe)) {
+            return recipe
+        }
+    })
     const dietTypeArray = Object.keys(dietType).filter((key) => dietType[key])
     const filteredDietTypes = filteredRecipes.filter((recipe) => dietTypeArray.includes(recipe.diet))
 
